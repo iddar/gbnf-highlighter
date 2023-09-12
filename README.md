@@ -2,6 +2,8 @@
 
 GBNF Highlighter is a syntax highlighter for the .gbnf file format, making it easier for developers to read and write grammar-based files within Visual Studio Code.
 
+![screen shot of code colored](https://raw.githubusercontent.com/iddar/gbnf-highlighter/main/preview.png)
+
 ## Features
 
 Syntax Highlighting: Makes .gbnf files more readable with color-coded grammar elements.

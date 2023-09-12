@@ -4,6 +4,7 @@
   "description": "GBNF syntax high-lighter for Visual Studio Code",
   "author": "Iddar Olivares <iddar@dbug.mx>",
   "repository": "https://github.com/iddar/gbnf-highlighter",
+  "publisher": "iddar",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.82.0"
