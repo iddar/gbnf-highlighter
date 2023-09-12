@@ -2,6 +2,8 @@
 
 GBNF Highlighter is a syntax highlighter for the .gbnf file format, making it easier for developers to read and write grammar-based files within Visual Studio Code.
 
+This file format its a part of Llama.cpp project can you see more in [here](https://github.com/ggerganov/llama.cpp/pull/2991). With this files can you manipulate the grammar output of the LLama Model.
+
 ![screen shot of code colored](https://raw.githubusercontent.com/iddar/gbnf-highlighter/main/preview.png)
 
 ## Features
