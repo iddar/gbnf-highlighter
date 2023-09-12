@@ -1,0 +1,36 @@
+{
+  "name": "gbnf-highlighter",
+  "displayName": "GBNF Highlighter",
+  "description": "GBNF syntax high-lighter for Visual Studio Code",
+  "author": "Iddar Olivares <iddar@dbug.mx>",
+  "repository": "https://github.com/iddar/gbnf-highlighter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "gbnf",
+        "aliases": [
+          "gbnf",
+          "gbnf"
+        ],
+        "extensions": [
+          ".gbnf"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gbnf",
+        "scopeName": "source.gbnf",
+        "path": "./syntaxes/gbnf.tmLanguage.json"
+      }
+    ]
+  }
+}

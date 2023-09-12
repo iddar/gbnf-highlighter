@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "gbnf",
+  "scopeName": "source.gbnf",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#variables" },
+    { "include": "#assignment" },
+    { "include": "#operators" },
+    { "include": "#strings" },
+    { "include": "#identifiers" },
+    { "include": "#whitespace" }
+  ],
+  "repository": {
+    "variables": {
+      "name": "variable.language",
+      "match": "\\b[a-zA-Z_][a-zA-Z_0-9]*\\b(?=\\s*::=)"
+    },
+    "assignment": {
+      "name": "keyword.operator.assignment",
+      "match": "::="
+    },
+    "operators": {
+      "name": "keyword.operator",
+      "match": "\\||\\(|\\)"
+    },
+    "strings": {
+      "name": "string.quoted.double",
+      "begin": "\"",
+      "end": "\""
+    },
+    "identifiers": {
+      "name": "variable.identifier",
+      "match": "\\b[a-zA-Z_][a-zA-Z_0-9]*\\b"
+    },
+    "comments": {
+      "name": "comment.line",
+      "begin": "#",
+      "end": "\\n"
+    },
+    "whitespace": {
+      "name": "keyword.control.whitespace",
+      "match": "\\bws\\b"
+    }
+  }
+}
