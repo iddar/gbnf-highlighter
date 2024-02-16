@@ -32,6 +32,10 @@ If you find any issues or have suggestions for improvements, please file an issu
 
 Created by Iddar Olivares. Contact: iddar@dbug.mx
 
+### Contributors
+
+[@TheDudeFromCI](https://github.com/TheDudeFromCI)
+
 ## License
 
 GBNF Highlighter is licensed under the MIT License.
