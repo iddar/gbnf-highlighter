@@ -6,40 +6,67 @@
     { "include": "#comments" },
     { "include": "#variables" },
     { "include": "#assignment" },
-    { "include": "#operators" },
     { "include": "#strings" },
+    { "include": "#character-class" },
+    { "include": "#quantifiers" },
+    { "include": "#operators" },
     { "include": "#identifiers" },
     { "include": "#whitespace" }
   ],
   "repository": {
+    "comments": {
+      "name": "comment.line.number-sign.gbnf",
+      "begin": "#",
+      "end": "$"
+    },
     "variables": {
-      "name": "variable.language",
-      "match": "\\b[a-zA-Z\-][a-zA-Z\-0-9]*\\b(?=\\s*::=)"
+      "name": "entity.name.function.gbnf",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_-]*\\b(?=\\s*::=)"
     },
     "assignment": {
-      "name": "keyword.operator.assignment",
+      "name": "keyword.operator.assignment.gbnf",
       "match": "::="
     },
-    "operators": {
-      "name": "keyword.operator",
-      "match": "\\||\\(|\\)"
-    },
     "strings": {
-      "name": "string.quoted.double",
+      "name": "string.quoted.double.gbnf",
       "begin": "\"",
-      "end": "\""
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.gbnf",
+          "match": "\\\\[\"\\\\\/bfnrt]|\\\\u[0-9a-fA-F]{4}"
+        }
+      ]
+    },
+    "character-class": {
+      "name": "constant.character.character-class.gbnf",
+      "begin": "\\[",
+      "end": "\\]",
+      "patterns": [
+        {
+          "name": "constant.character.escape.gbnf",
+          "match": "\\\\."
+        },
+        {
+          "name": "constant.other.range.gbnf",
+          "match": "[^\\]\\\\]-[^\\]\\\\]"
+        }
+      ]
+    },
+    "quantifiers": {
+      "name": "keyword.operator.quantifier.gbnf",
+      "match": "[*+?]"
+    },
+    "operators": {
+      "name": "keyword.operator.gbnf",
+      "match": "[|(){}]"
     },
     "identifiers": {
-      "name": "variable.identifier",
-      "match": "\\b[a-zA-Z\-][a-zA-Z\-0-9]*\\b"
-    },
-    "comments": {
-      "name": "comment.line",
-      "begin": "#",
-      "end": "\\n"
+      "name": "variable.other.gbnf",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_-]*\\b"
     },
     "whitespace": {
-      "name": "keyword.control.whitespace",
+      "name": "support.variable.gbnf",
       "match": "\\bws\\b"
     }
   }
